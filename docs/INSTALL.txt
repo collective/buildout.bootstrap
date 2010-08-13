@@ -1,0 +1,15 @@
+Installation
+============
+
+To use extension, just add ``buildout.bootstrap`` to the [buildout] section of
+your ``buildout.cfg``::
+
+    [buildout]
+    extensions =
+        ...
+        buildout.bootstrap
+
+Now whenever you run Buildout this extension will add or update your
+buildout's bootstrap.py file, leaving you free to do other more important
+things: like write, test, and deploy your code!
+

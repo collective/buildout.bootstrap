@@ -11,6 +11,8 @@ setup(
     version='1.1',
     description="""A zc.buildout extension that adds a zc.buildout bootstrap.py
     file to your buildout.""",
+    long_description=(read('README.txt') + read('docs/HISTORY.txt') +
+        read('docs/CONTRIBUTORS.txt')),
     keywords='buildout bootstrap',
     author='Alex Clark',
     author_email='aclark@aclark.net',
@@ -23,7 +25,6 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules',
         'License :: OSI Approved :: Zope Public License',
         ],
-    long_description=read('README.txt') + read('docs/HISTORY.txt'),
     packages=find_packages(),
     install_requires=['setuptools'],
     namespace_packages=['buildout'],

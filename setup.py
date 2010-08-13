@@ -26,7 +26,7 @@ setup(
         'License :: OSI Approved :: Zope Public License',
         ],
     packages=find_packages(),
-    install_requires=['setuptools'],
+    install_requires=['distribute'],
     namespace_packages=['buildout'],
     entry_points={
         "zc.buildout.extension": ["default = buildout.bootstrap:install"]})

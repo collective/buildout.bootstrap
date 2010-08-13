@@ -2,8 +2,8 @@
 Introduction
 ============
 
-``buildout.bootstrap`` is a zc.buildout extension that adds a zc.buildout
-``bootstrap.py`` file to your buildout.
+``buildout.bootstrap`` (formerly collective.recipe.bootstrap) is a zc.buildout extension 
+that adds a (zc.buildout) ``bootstrap.py`` file to your buildout.
 
 It satisfies the use case of::
 
@@ -13,12 +13,17 @@ It satisfies the use case of::
 It also makes it possible (and easy) to add a bootstrap.py file to a buildout created
 via the command: ``buildout init``. 
 
-With this extension, you can avoid having to type::
+If at this point you still don't understand, consider the following. With this extension
+you can avoid having to type::
 
     % wget http://svn.zope.org/repos/main/zc.buildout/trunk/bootstrap/bootstrap.py
 
-Just add a new extension called ``buildout.bootstrap`` to the buildout section
-of your Buildout configuration file::
+
+Installation
+============
+
+To use this zc.buildout extension, just add a new extension called ``buildout.bootstrap``
+to the buildout section of your ``buildout.cfg``::
 
     [buildout]
     extensions = 

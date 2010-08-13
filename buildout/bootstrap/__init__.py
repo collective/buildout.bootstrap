@@ -12,13 +12,19 @@ def install(buildout):
             bootstrap.py
 
     """
+    url = 'http://svn.zope.org/repos/main/zc.buildout/%s/'
+    url2 = 'bootstrap/bootstrap.py'
     version = 'trunk'
+    url = url % version
+    url = url + url2
     if 'bootstrap' in buildout:
         if 'version' in buildout['bootstrap']:
-            version = 'tags/%s' % buildout['bootstrap']['version']
-    base = 'http://svn.zope.org'
-    prefix = '/repos/main/zc.buildout/'
-    url = base + prefix + '%s/bootstrap/bootstrap.py' % version
+            version = buildout['bootstrap']['version']
+            if version != 'trunk':
+                version = 'tags/%s' % version
+            url = url % version
+            url = url + url2
+
     code = urllib.urlopen(url).getcode() 
     if code == 200:
         data = urllib.urlopen(url).read()

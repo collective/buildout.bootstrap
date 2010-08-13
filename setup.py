@@ -8,7 +8,7 @@ def read(*rnames):
 
 setup(
     name='buildout.bootstrap',
-    version='1.1',
+    version='1.2',
     description="""A zc.buildout extension that adds a (zc.buildout) bootstrap.py
     file to your buildout.""",
     long_description=(read('README.txt') + read('docs/INSTALL.txt') +
@@ -17,7 +17,7 @@ setup(
     keywords='buildout bootstrap',
     author='Alex Clark',
     author_email='aclark@aclark.net',
-    url='http://svn.plone.org/svn/collective/buildout/buildout.bootsrap',
+    url='http://svn.plone.org/svn/collective/buildout/buildout.bootstrap',
     license='ZPL',
     classifiers=[
         'Framework :: Buildout',

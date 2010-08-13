@@ -9,9 +9,10 @@ def read(*rnames):
 setup(
     name='buildout.bootstrap',
     version='1.1',
-    description="""A zc.buildout extension that adds a zc.buildout bootstrap.py
+    description="""A zc.buildout extension that adds a (zc.buildout) bootstrap.py
     file to your buildout.""",
-    long_description=(read('README.txt') + read('docs/HISTORY.txt') +
+    long_description=(read('README.txt') + read('docs/INSTALL.txt') +
+        read('docs/HISTORY.txt') +
         read('docs/CONTRIBUTORS.txt')),
     keywords='buildout bootstrap',
     author='Alex Clark',
@@ -26,7 +27,7 @@ setup(
         'License :: OSI Approved :: Zope Public License',
         ],
     packages=find_packages(),
-    install_requires=['setuptools'],
+    install_requires=['distribute'],
     namespace_packages=['buildout'],
     entry_points={
         "zc.buildout.extension": ["default = buildout.bootstrap:install"]})

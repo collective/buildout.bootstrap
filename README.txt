@@ -7,8 +7,7 @@ that adds a (zc.buildout) ``bootstrap.py`` file to your buildout.
 
 It satisfies the use case of::
 
-    "I want to keep my buildout's bootstrap.py file up to date 
-    without having to manually download it from svn.zope.org." 
+    "I want to keep my buildout's bootstrap.py file up to date without having to manually download it from svn.zope.org." 
 
 It also makes it possible (and easy) to add a bootstrap.py file to a buildout created
 via the command: ``buildout init``. 
@@ -16,20 +15,13 @@ via the command: ``buildout init``.
 If at this point you still don't understand, consider the following. With this extension
 you can avoid having to type::
 
-    % wget http://svn.zope.org/repos/main/zc.buildout/trunk/bootstrap/bootstrap.py
+    $ wget http://svn.zope.org/repos/main/zc.buildout/trunk/bootstrap/bootstrap.py
 
+You mostly use this when you have initialized a new buildout (e.g. with
+``buildout init``) and you want to: 
 
-Installation
-============
+    - Check in the buildout to a version control system
+    - Check out the buildout elsewhere and bootstrap it
 
-To use this zc.buildout extension, just add a new extension called ``buildout.bootstrap``
-to the buildout section of your ``buildout.cfg``::
+See ``docs/INSTALL.txt`` for installation instructions.
 
-    [buildout]
-    extensions = 
-        ...
-        buildout.bootstrap
-
-Now whenever you run Buildout this extension will add or update your
-buildout's bootstrap.py file, leaving you free to do other more important
-things: like write, test, and deploy your code!

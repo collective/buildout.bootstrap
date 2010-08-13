@@ -25,33 +25,28 @@ def install(buildout):
             url = url % version
             url = url + url2
 
-    code = urllib.urlopen(url).getcode() 
+    code = urllib.urlopen(url).getcode()
     if code == 200:
         data = urllib.urlopen(url).read()
         file = '/'.join([buildout['buildout']['directory'], 'bootstrap.py'])
         bootstrap = open(file, 'w')
         bootstrap.write(data)
         bootstrap.close()
-
-        print ('----------------------------------------' +
+        line = ('----------------------------------------' +
                 '----------------------------------------')
+        print line
         print 'Downloading zc.buildout bootstrap.py file from:\n  %s' % url
         print 'To:\n  %s' % file
-        print ('----------------------------------------' +
-                '----------------------------------------')
+        print line
     elif code == 404:
-        print ('----------------------------------------' +
-                '----------------------------------------')
-        print 'Unable to download zc.buildout bootstrap.py file from:\n  %s' % url
+        print line
+        print ('Unable to download zc.buildout bootstrap.py file from:\n  %s' %
+            url)
         print 'Not found.'
-        print ('----------------------------------------' +
-                '----------------------------------------')
+        print line
     else:
-        print ('----------------------------------------' +
-                '----------------------------------------')
-        print 'Unable to download zc.buildout bootstrap.py file from:\n  %s' % url
+        print line
+        print ('Unable to download zc.buildout bootstrap.py file from:\n  %s' %
+            url)
         print 'Unknown error code: %' % code
-        print ('----------------------------------------' +
-                '----------------------------------------')
-
-
+        print line

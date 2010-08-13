@@ -22,7 +22,7 @@ def install(buildout):
 
     print ('----------------------------------------' +
             '----------------------------------------')
-    print 'Downloading zc.buildout \'bootstrap.py\' file from:\n  %s' % url
+    print 'Downloading zc.buildout bootstrap.py file from:\n  %s' % url
     print 'To:\n  %s' % file
     print ('----------------------------------------' +
             '----------------------------------------')

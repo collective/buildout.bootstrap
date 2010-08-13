@@ -1,8 +1,6 @@
+# -*- coding: utf-8 -*-
 import os
 from setuptools import setup, find_packages
-
-description = """A zc.buildout extension that adds a zc.buildout bootstrap.py
-    file to your buildout."""
 
 
 def read(*rnames):
@@ -11,7 +9,20 @@ def read(*rnames):
 setup(
     name='buildout.bootstrap',
     version='1.1',
-    description=description,
+    description="""A zc.buildout extension that adds a zc.buildout bootstrap.py
+    file to your buildout.""",
+    keywords='buildout bootstrap',
+    author='Alex Clark',
+    author_email='aclark@aclark.net',
+    url='http://svn.plone.org/svn/collective/buildout/buildout.bootsrap',
+    license='ZPL',
+    classifiers=[
+        'Framework :: Buildout',
+        'Intended Audience :: Developers',
+        'Topic :: Software Development :: Build Tools',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+        'License :: OSI Approved :: Zope Public License',
+        ],
     long_description=read('README.txt') + read('docs/HISTORY.txt'),
     packages=find_packages(),
     install_requires=['setuptools'],

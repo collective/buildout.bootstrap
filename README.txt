@@ -22,7 +22,7 @@ of your Buildout configuration file::
 
     [buildout]
     extensions = 
-        …
+        ...
         buildout.bootstrap
 
 Now whenever you run Buildout this extension will add or update your

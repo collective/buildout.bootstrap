@@ -9,7 +9,7 @@ def read(*rnames):
 setup(
     name='buildout.bootstrap',
     version='1.1',
-    description="""A zc.buildout extension that adds a zc.buildout bootstrap.py
+    description="""A zc.buildout extension that adds a (zc.buildout) bootstrap.py
     file to your buildout.""",
     long_description=(read('README.txt') + read('docs/INSTALL.txt') +
         read('docs/HISTORY.txt') +

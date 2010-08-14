@@ -10,7 +10,7 @@ class TestBuildoutBootstrap(unittest.TestCase):
 
     def test_install(self):
         install(self.buildout)
-        assert ('bootstrap.py' in os.listdir('.')), False
+        assert 'bootstrap.py' in os.listdir('.'), False
 
 if __name__ == '__main__':
     unittest.main()

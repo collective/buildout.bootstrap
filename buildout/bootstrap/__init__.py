@@ -1,7 +1,7 @@
 import urllib
 
 
-def install(buildout):
+def install(buildout, open_=None): 
     """
     You know, I have one simple request. And that is to have sharks with
     frickin' laser beams attached to their heads!
@@ -29,7 +29,8 @@ def install(buildout):
     if code == 200:
         data = urllib.urlopen(url).read()
         file = '/'.join([buildout['buildout']['directory'], 'bootstrap.py'])
-        bootstrap = open(file, 'w')
+        if open_ is None:open_ = open
+        bootstrap = open_(file, 'w')
         bootstrap.write(data)
         bootstrap.close()
         line = ('----------------------------------------' +

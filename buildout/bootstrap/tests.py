@@ -1,14 +1,16 @@
+import os
 import unittest
+from buildout.bootstrap import install
 
 
 class TestBuildoutBootstrap(unittest.TestCase):
 
     def setUp(self):
-        pass
+        self.buildout = {'buildout': {'directory': '.'}}
 
-    def test_foo(self):
-        pass
+    def test_install(self):
+        install(self.buildout)
+        assert ('bootstrap.py' in os.listdir('.')), False
 
 if __name__ == '__main__':
     unittest.main()
-

@@ -13,3 +13,18 @@ Now whenever you run Buildout this extension will add or update your
 buildout's bootstrap.py file, leaving you free to do other more important
 things: like write, test, and deploy your code!
 
+Options
+=======
+
+You can specify in which version ``zc.buildout`` you want to look for the 
+bootstrap.py file (trunk by default)::
+
+    [buildout]
+    extensions = buildout.bootstrap
+
+    [bootstrap]
+    version = 1.0.0
+
+This is normally not necessary, but in the event trunk breaks one day (which
+has happened) then you can specify the last known good version.
+

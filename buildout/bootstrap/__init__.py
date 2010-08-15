@@ -1,5 +1,7 @@
 import urllib
 
+line = ('----------------------------------------' +
+        '----------------------------------------')
 
 def install(buildout, open_=None): 
     """
@@ -12,6 +14,11 @@ def install(buildout, open_=None):
             bootstrap.py
 
     """
+    if 'buildout' not in buildout:
+        print line
+        print 'No can do'
+        print line
+        return
     url = 'http://svn.zope.org/repos/main/zc.buildout/%s/'
     url2 = 'bootstrap/bootstrap.py'
     version = 'trunk'
@@ -33,8 +40,6 @@ def install(buildout, open_=None):
         bootstrap = open_(file, 'w')
         bootstrap.write(data)
         bootstrap.close()
-        line = ('----------------------------------------' +
-                '----------------------------------------')
         print line
         print 'Downloading zc.buildout bootstrap.py file from:\n  %s' % url
         print 'To:\n  %s' % file

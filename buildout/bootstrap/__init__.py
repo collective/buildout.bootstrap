@@ -27,7 +27,7 @@ def install(buildout, open_=None):
         bootstrap.close()
         print line
         print 'Downloading zc.buildout bootstrap.py file from:\n  %s' % url
-        print 'To:\n  %s' % file
+        print 'To:\n  %s' % infile
         print line
     elif code == 404:
         print line

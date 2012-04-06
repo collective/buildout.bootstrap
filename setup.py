@@ -1,32 +1,34 @@
-# -*- coding: utf-8 -*-
-import os
-from setuptools import setup, find_packages
+from setuptools import find_packages
+from setuptools import setup
 
-
-def read(*rnames):
-    return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
 
 setup(
-    name='buildout.bootstrap',
-    version='1.2',
-    description="""A zc.buildout extension that adds a (zc.buildout)
-    bootstrap.py file to your buildout.""",
-    long_description=(read('README.txt') + read('docs/INSTALL.txt') +
-        read('docs/HISTORY.txt') +
-        read('docs/CONTRIBUTORS.txt')),
-    keywords='buildout bootstrap',
     author='Alex Clark',
     author_email='aclark@aclark.net',
-    url='http://svn.plone.org/svn/collective/buildout/buildout.bootstrap',
-    license='ZPL',
     classifiers=[
         'Framework :: Buildout',
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Build Tools',
-        'Topic :: Software Development :: Libraries :: Python Modules',
         'License :: OSI Approved :: Zope Public License',
-        ],
+    ],
+    description='A buildout extension that adds a buildout\
+        bootstrap.py file to your buildout.',
+    entry_points={
+        "zc.buildout.extension": [
+            "default = buildout.bootstrap:install"
+        ]
+    },
+    license='ZPL',
+    name='buildout.bootstrap',
+    version='1.2',
+    long_description=(
+        open('README.rst').read() +
+        open('docs/INSTALL.txt').read() +
+        open('docs/HISTORY.txt').read() +
+        open('docs/CONTRIBUTORS.txt').read()
+    ),
+    keywords='buildout bootstrap',
+    url='http://collective.github.com/buildout.bootstrap',
     packages=find_packages(),
     namespace_packages=['buildout'],
-    entry_points={
-        "zc.buildout.extension": ["default = buildout.bootstrap:install"]})
+)

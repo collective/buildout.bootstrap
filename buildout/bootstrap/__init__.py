@@ -3,41 +3,26 @@ import urllib
 line = ('----------------------------------------' +
         '----------------------------------------')
 
-def install(buildout, open_=None): 
+
+def install(buildout, open_=None):
     """
-    You know, I have one simple request. And that is to have sharks with
-    frickin' laser beams attached to their heads!
+    You know, I have one simple request. And that is to have sharks
+    with frickin' laser beams attached to their heads! Actually, all
+    I really want to do is avoid typing:
 
-    Actually, all I really want to do is avoid typing:
-
-        $ wget http://svn.zope.org/repos/main/zc.buildout/trunk/bootstrap/\
-            bootstrap.py
+        $ curl -O https://raw.github.com/buildout/buildout/master/\
+            bootstrap/bootstrap.py
 
     """
-    if 'buildout' not in buildout:
-        print line
-        print 'No can do'
-        print line
-        return
-    url = 'http://svn.zope.org/repos/main/zc.buildout/%s/'
-    url2 = 'bootstrap/bootstrap.py'
-    version = 'trunk'
-    url = url % version
-    url = url + url2
-    if 'bootstrap' in buildout:
-        if 'version' in buildout['bootstrap']:
-            version = buildout['bootstrap']['version']
-            if version != 'trunk':
-                version = 'tags/%s' % version
-            url = url % version
-            url = url + url2
-
+    url = 'https://raw.github.com/buildout/buildout'
+    url += '/master/bootstrap/bootstrap.py'
     code = urllib.urlopen(url).getcode()
     if code == 200:
         data = urllib.urlopen(url).read()
-        file = '/'.join([buildout['buildout']['directory'], 'bootstrap.py'])
-        if open_ is None:open_ = open
-        bootstrap = open_(file, 'w')
+        infile = '/'.join([buildout['buildout']['directory'], 'bootstrap.py'])
+        if open_ is None:
+            open_ = open
+        bootstrap = open_(infile, 'w')
         bootstrap.write(data)
         bootstrap.close()
         print line

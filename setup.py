@@ -1,6 +1,8 @@
 from setuptools import find_packages
 from setuptools import setup
 
+VERSION='1.3.0'
+
 
 setup(
     author='Alex Clark',
@@ -32,5 +34,5 @@ setup(
     ],
     packages=find_packages(),
     url='http://collective.github.com/buildout.bootstrap',
-    version='1.2',
+    version=VERSION,
 )

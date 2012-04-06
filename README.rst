@@ -4,7 +4,7 @@ Introduction
 
 *Formerly collective.recipe.bootstrap*
 
-``buildout.bootstrap`` is a buildout extension that adds a buildout ``bootstrap.py`` file to your buildout.
+``buildout.bootstrap`` is a buildout extension that adds a buildout bootstrap.py file to your buildout.
 
 It satisfies the use case of::
 

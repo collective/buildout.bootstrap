@@ -18,17 +18,19 @@ setup(
             "default = buildout.bootstrap:install"
         ]
     },
+    keywords='buildout bootstrap',
     license='ZPL',
-    name='buildout.bootstrap',
-    version='1.2',
     long_description=(
         open('README.rst').read() +
         open('docs/INSTALL.txt').read() +
         open('docs/HISTORY.txt').read() +
         open('docs/CONTRIBUTORS.txt').read()
     ),
-    keywords='buildout bootstrap',
-    url='http://collective.github.com/buildout.bootstrap',
+    name='buildout.bootstrap',
+    namespace_packages=[
+        'buildout'
+    ],
     packages=find_packages(),
-    namespace_packages=['buildout'],
+    url='http://collective.github.com/buildout.bootstrap',
+    version='1.2',
 )

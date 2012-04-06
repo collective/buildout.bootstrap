@@ -10,11 +10,11 @@ It satisfies the use case of::
 
     "I want to keep my buildout's bootstrap.py file up to date without having to manually download it" 
 
-It also makes it fun and easy to add a *bootstrap.py* file to a buildout created via the command line with::
+It also makes it easy to add a *bootstrap.py* file to a buildout created via::
 
     $ buildout init
 
-If you still don't understand, consider the following: with this extension you can avoid having to type::
+If you still don't understand consider the following: with this extension you can avoid having to type::
 
     $ curl -O https://raw.github.com/buildout/buildout/master/src/zc/buildout/buildout.py
 

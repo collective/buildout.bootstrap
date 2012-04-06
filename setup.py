@@ -20,6 +20,10 @@ setup(
             "default = buildout.bootstrap:install"
         ]
     },
+    install_requires=[
+        'setuptools',
+        'zc.buildout',
+    ],
     keywords='buildout bootstrap',
     license='ZPL',
     long_description=(

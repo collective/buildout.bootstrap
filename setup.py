@@ -1,5 +1,6 @@
 from setuptools import find_packages
 from setuptools import setup
+import os
 
 VERSION='1.3.0'
 
@@ -28,9 +29,9 @@ setup(
     license='ZPL',
     long_description=(
         open('README.rst').read() +
-        open('docs/INSTALL.txt').read() +
-        open('docs/HISTORY.txt').read() +
-        open('docs/CONTRIBUTORS.txt').read()
+        open(os.path.join('docs', 'INSTALL.txt')).read() +
+        open(os.path.join('docs', 'HISTORY.txt')).read() +
+        open(os.path.join('docs', 'CONTRIBUTORS.txt')).read()
     ),
     name='buildout.bootstrap',
     namespace_packages=[

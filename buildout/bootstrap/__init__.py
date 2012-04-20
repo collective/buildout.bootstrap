@@ -39,5 +39,5 @@ def install(buildout, open_=None):
         print line
         print ('Unable to download zc.buildout bootstrap.py file from:\n  %s' %
             url)
-        print 'Unknown error code: %' % code
+        print 'Unknown error code: %s' % code
         print line

@@ -16,7 +16,12 @@ def install(buildout, open_=None):
     """
     url = 'https://raw.github.com/buildout/buildout'
     url += '/master/bootstrap/bootstrap.py'
-    code = urllib.urlopen(url).getcode()
+    try:
+        code = urllib.urlopen(url).getcode()
+    except:
+        # BBB Support Python 2.4
+        import urllib2
+        code = urllib2.urlopen(url).code
     if code == 200:
         data = urllib.urlopen(url).read()
         infile = '/'.join([buildout['buildout']['directory'], 'bootstrap.py'])

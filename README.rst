@@ -1,4 +1,3 @@
-
 Introduction
 ============
 
@@ -16,7 +15,7 @@ It also makes it easy to add a *bootstrap.py* file to a buildout created via::
 
 If you still don't understand consider the following: with this extension you can avoid having to type::
 
-    $ curl -O https://raw.github.com/buildout/buildout/master/src/zc/buildout/buildout.py
+    $ curl -O https://raw.github.com/buildout/buildout/master/bootstrap/bootstrap.py
 
 You typically use this extension when you have created a new buildout and want to
 

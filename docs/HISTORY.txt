@@ -2,20 +2,22 @@
 Changes
 =======
 
-1.3.1 (Unreleased)
+1.4.0 (2012-05-16)
 ------------------
+
+- Support Python 2.4
+  [aclark]
 
 1.3.0 (2012-04-06)
 ------------------
 
-- Clean up
-- Support move to github
-- Remove option to specify version (based on svn tag).
+- Clean up package. Buildout moved to github. Remove option to specify version (based on svn tag)
+  [aclark]
 
 1.2 (2010-08-13)
 ----------------
 
-- Add option to specify version (based on svn tag).
+- Add option to specify version (based on svn tag)
   [aclark]
 
 - Add test stubs

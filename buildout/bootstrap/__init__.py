@@ -10,12 +10,11 @@ def install(buildout, open_=None):
     with frickin' laser beams attached to their heads! Actually, all
     I really want to do is avoid typing:
 
-        $ curl -O https://raw.github.com/buildout/buildout/master/\
-            bootstrap/bootstrap.py
+        $ curl -O http://buildout.org/bootstrap.py
 
     """
-    url = 'https://raw.github.com/buildout/buildout'
-    url += '/master/bootstrap/bootstrap.py'
+    # 1.5.x bootstrap
+    url = 'http://buildout.org/bootstrap.py'
     try:
         code = urllib.urlopen(url).getcode()
     except:

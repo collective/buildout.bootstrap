@@ -2,6 +2,12 @@
 Changes
 =======
 
+1.4.1 (2012-05-16)
+------------------
+
+- Change bootstrap URL to http://buildout.org/bootstrap.py
+  [aclark]
+
 1.4.0 (2012-05-16)
 ------------------
 

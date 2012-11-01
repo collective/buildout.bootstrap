@@ -1,2 +1,3 @@
-include *.rst
-recursive-include docs *.txt
+include *
+recursive-include buildout *
+recursive-include docs *

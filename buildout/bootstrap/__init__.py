@@ -3,13 +3,15 @@ import urllib
 line = '-' * 80
 truthiness = ('true', 'yes', 'on')
 
+
 def install(buildout, open_=None):
     """
     You know, I have one simple request. And that is to have sharks
     with frickin' laser beams attached to their heads! Actually, all
     I really want to do is avoid typing:
 
-        $ curl -O https://raw.github.com/buildout/buildout/1.6.x/bootstrap/bootstrap.py
+        $ curl -O https://raw.github.com/buildout/buildout/1.6.x/\
+                bootstrap/bootstrap.py
 
     """
     offline = buildout['buildout'].get('offline', 'true').lower()
@@ -17,7 +19,8 @@ def install(buildout, open_=None):
         print 'Not updating bootstrap.py because buildout is in offline mode.'
         return
     # 1.6.x bootstrap
-    url = 'https://raw.github.com/buildout/buildout/1.6.x/bootstrap/bootstrap.py'
+    url = 'https://raw.github.com/buildout/buildout/1.6.x/bootstrap/'
+    url += 'bootstrap.py'
     try:
         code = urllib.urlopen(url).getcode()
     except:

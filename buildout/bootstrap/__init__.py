@@ -1,8 +1,7 @@
 import urllib
 
-line = ('----------------------------------------' +
-        '----------------------------------------')
-
+line = '-' * 80
+truthiness = ('true', 'yes', 'on')
 
 def install(buildout, open_=None):
     """
@@ -13,6 +12,10 @@ def install(buildout, open_=None):
         $ curl -O https://raw.github.com/buildout/buildout/1.6.x/bootstrap/bootstrap.py
 
     """
+    offline = buildout['buildout'].get('offline', 'true').lower()
+    if offline in truthiness:
+        print 'Not updating bootstrap.py because buildout is in offline mode.'
+        return
     # 1.6.x bootstrap
     url = 'https://raw.github.com/buildout/buildout/1.6.x/bootstrap/bootstrap.py'
     try:

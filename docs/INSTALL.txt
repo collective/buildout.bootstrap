@@ -1,9 +1,8 @@
 Installation
 ============
 
-Add ``buildout.bootstrap`` to the buildout section of your ``buildout.cfg``::
+Add ``buildout.bootstrap`` to the extensions parameter in the buildout section of your ``buildout.cfg`` e.g.::
 
     [buildout]
-    extensions =
-        …
-        buildout.bootstrap
+    extensions = buildout.bootstrap
+    parts =

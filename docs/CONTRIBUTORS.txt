@@ -2,7 +2,6 @@
 Contributors
 ============
 
-Alex Clark, author
-    [aclark]
-
-
+- Alex Clark
+- David Beitey
+- Sean "nutjob" Kelly

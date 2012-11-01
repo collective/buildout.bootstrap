@@ -23,4 +23,3 @@ You typically use this extension when you have created a new buildout and want t
     - Check it out somewhere else
 
 See ``docs/INSTALL.txt`` for installation instructions.
-

@@ -27,9 +27,9 @@ setup(
     keywords='buildout bootstrap',
     license='ZPL',
     long_description=(
-        open('README.rst').read() +
-        open(os.path.join('docs', 'INSTALL.txt')).read() +
-        open(os.path.join('docs', 'HISTORY.txt')).read() +
+        open('README.rst').read() + '\n' +
+        open(os.path.join('docs', 'INSTALL.txt')).read() + '\n' +
+        open(os.path.join('docs', 'HISTORY.txt')).read() + '\n' +
         open(os.path.join('docs', 'CONTRIBUTORS.txt')).read()
     ),
     name='buildout.bootstrap',

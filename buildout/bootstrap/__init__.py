@@ -23,7 +23,11 @@ def install(buildout, open_=None):
     url += 'bootstrap.py'
     try:
         code = urllib.urlopen(url).getcode()
-    except:
+    except IOError, e:
+        if len(e.args) > 1:
+            # Not so cool, but it works for 404
+            code = e.args[1]
+    except AttributeError:
         # BBB Support Python 2.4
         import urllib2
         code = urllib2.urlopen(url).code

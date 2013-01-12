@@ -1,6 +1,14 @@
 Changes
 =======
 
+1.4.4 (2013-01-12)
+------------------
+
+- Update buildout/bootstrap/__init__.py
+  [do3cc]
+- Working error codes
+  [do3cc]
+
 1.4.3 (2012-11-01)
 ------------------
 

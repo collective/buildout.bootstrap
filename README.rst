@@ -1,7 +1,7 @@
 Introduction
 ============
 
-**Formerly collective.recipe.bootstrap**
+*Formerly collective.recipe.bootstrap*
 
 ``buildout.bootstrap`` is a Buildout extension that adds a Buildout ``bootstrap.py`` file to your buildout.
 
@@ -30,7 +30,7 @@ Run buildout again and afterward you should have a ``bootstrap.py`` file. Once y
 
 If you still don't understand, consider the following: with this extension you can avoid having to type::
 
-    $ curl -O https://raw.github.com/buildout/buildout/1.6.x/bootstrap/bootstrap.py
+    $ curl -O https://raw.github.com/buildout/buildout/1/bootstrap/bootstrap.py
 
 You typically use this extension when you have created a new buildout and want to:
 

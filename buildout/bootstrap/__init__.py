@@ -18,8 +18,8 @@ def install(buildout, open_=None):
     if offline in truthiness:
         print 'Not updating bootstrap.py because buildout is in offline mode.'
         return
-    # 1.6.x bootstrap
-    url = 'https://raw.github.com/buildout/buildout/1.6.x/bootstrap/'
+    # 1.x bootstrap
+    url = 'https://raw.github.com/buildout/buildout/1/bootstrap/'
     url += 'bootstrap.py'
     try:
         code = urllib.urlopen(url).getcode()

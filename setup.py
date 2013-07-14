@@ -3,7 +3,7 @@ from setuptools import setup
 import os
 
 
-VERSION = '1.4.4'
+VERSION = '1.4.6'
 
 
 setup(

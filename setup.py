@@ -2,7 +2,9 @@ from setuptools import find_packages
 from setuptools import setup
 import os
 
+
 VERSION = '1.4.4'
+
 
 setup(
     author='Alex Clark',

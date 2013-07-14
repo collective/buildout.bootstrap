@@ -12,6 +12,7 @@ setup(
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Build Tools',
         'License :: OSI Approved :: Zope Public License',
+        'Programming Language :: Python :: 2.7',
     ],
     description='A buildout extension that adds a buildout\
         bootstrap.py file to your buildout.',

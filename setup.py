@@ -39,4 +39,5 @@ setup(
     packages=find_packages(),
     url='http://collective.github.com/buildout.bootstrap',
     version=VERSION,
+    zip_safe=False,
 )

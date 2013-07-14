@@ -26,7 +26,7 @@ And you can now add the extension like so::
 
 Run buildout again and afterward you should have a ``bootstrap.py`` file. Once you have a ``bootstrap.py`` file you can bootstrap the buildout via::
 
-    $ python bootstrap.py -d (-d to specify distribute)
+    $ python bootstrap.py 
 
 If you still don't understand, consider the following: with this extension you can avoid having to type::
 

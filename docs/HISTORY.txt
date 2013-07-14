@@ -1,6 +1,11 @@
 Changes
 =======
 
+1.4.4 (2013-07-13)
+------------------
+
+- Default to Buildout 2
+
 1.4.3 (2012-11-01)
 ------------------
 
@@ -11,20 +16,16 @@ Changes
 ------------------
 
 - Change bootstrap URL to https://raw.github.com/buildout/buildout/1.6.x/bootstrap/bootstrap.py
-  [aclark]
 
 1.4.1 (2012-05-16)
 ------------------
 
 - Change bootstrap URL to http://buildout.org/bootstrap.py
-  [aclark]
 
 1.4.0 (2012-05-16)
 ------------------
 
 - Support Python 2.4
-  [aclark]
-
 - Doc fix
   [davidjb]
 
@@ -32,34 +33,26 @@ Changes
 ------------------
 
 - Clean up package. Buildout moved to github. Remove option to specify version (based on svn tag)
-  [aclark]
 
 1.2 (2010-08-13)
 ----------------
 
 - Add option to specify version (based on svn tag)
-  [aclark]
 
 - Add test stubs
-  [aclark]
 
 1.1 (2010-08-13)
 ----------------
 
 - Rename and repackage as Buildout extension
-  [aclark]
 
 1.0 (2009-12-19)
 ----------------
 
 - Clean up docs
-  [aclark]
 
 0.1 (2009-08-07)
 ----------------
 
 - Add initial functionality
-  [aclark]
-
 - Created recipe with ZopeSkel
-  [aclark]

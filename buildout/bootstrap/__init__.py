@@ -8,11 +8,7 @@ def install(buildout, open_=None):
     """
     You know, I have one simple request. And that is to have sharks
     with frickin' laser beams attached to their heads! Actually, all
-    I really want to do is avoid typing:
-
-        $ curl -O https://raw.github.com/buildout/buildout/1.6.x/\
-                bootstrap/bootstrap.py
-
+    I really want to do is avoid having to download bootstrap.py.
     """
     offline = buildout['buildout'].get('offline', 'true').lower()
     if offline in truthiness:

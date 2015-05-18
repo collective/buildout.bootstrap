@@ -16,8 +16,9 @@ setup(
         'License :: OSI Approved :: Zope Public License',
         'Programming Language :: Python :: 2.7',
     ],
-    description='A buildout extension that adds a buildout\
-        bootstrap.py file to your buildout.',
+    description='Buildout extension to download ' + 
+        'https://bootstrap.pypa.io/bootstrap-buildout.py ' +
+        'automatically.',
     entry_points={
         "zc.buildout.extension": [
             "default = buildout.bootstrap:install"

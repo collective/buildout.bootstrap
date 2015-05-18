@@ -1,3 +1,2 @@
-include *
-recursive-include buildout *
-recursive-include docs *
+include *.rst
+include Makefile

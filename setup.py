@@ -31,9 +31,7 @@ setup(
     license='ZPL',
     long_description=(
         open('README.rst').read() + '\n' +
-        open('CHANGES.rst').read() + '\n' +
-        open(os.path.join('docs', 'INSTALL.txt')).read() + '\n' +
-        open(os.path.join('docs', 'CONTRIBUTORS.txt')).read()
+        open('CHANGES.rst').read() + '\n'
     ),
     name='buildout.bootstrap',
     namespace_packages=[

@@ -3,7 +3,7 @@ from setuptools import setup
 import os
 
 
-VERSION = '1.4.6'
+VERSION = '1.4.7'
 
 
 setup(
@@ -31,8 +31,8 @@ setup(
     license='ZPL',
     long_description=(
         open('README.rst').read() + '\n' +
+        open('CHANGES.rst').read() + '\n' +
         open(os.path.join('docs', 'INSTALL.txt')).read() + '\n' +
-        open(os.path.join('docs', 'HISTORY.txt')).read() + '\n' +
         open(os.path.join('docs', 'CONTRIBUTORS.txt')).read()
     ),
     name='buildout.bootstrap',
@@ -40,6 +40,7 @@ setup(
         'buildout'
     ],
     packages=find_packages(),
+    test_suite='buildout.bootstrap.tests.TestBuildoutBootstrap',
     url='http://collective.github.com/buildout.bootstrap',
     version=VERSION,
     zip_safe=False,

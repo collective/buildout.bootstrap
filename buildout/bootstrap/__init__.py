@@ -14,8 +14,7 @@ def install(buildout, open_=None):
     if offline in truthiness:
         print 'Not updating bootstrap.py because buildout is in offline mode.'
         return
-    url = 'https://raw.github.com/buildout/buildout/2/bootstrap/'
-    url += 'bootstrap.py'
+    url = 'https://bootstrap.pypa.io/bootstrap-buildout.py'
     try:
         code = urllib.urlopen(url).getcode()
     except IOError, e:

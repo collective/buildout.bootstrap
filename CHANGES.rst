@@ -1,6 +1,11 @@
 Changes
 =======
 
+1.4.7 (2015-05-18)
+------------------
+
+- Update URL to https://bootstrap.pypa.io/bootstrap-buildout.py
+
 1.4.6 (2013-07-13)
 ------------------
 

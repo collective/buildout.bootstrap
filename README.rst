@@ -6,7 +6,7 @@ Buildout extension to download https://bootstrap.pypa.io/bootstrap-buildout.py a
 Introduction
 ------------
 
-**Formerly collective.recipe.bootstrap**
+Formerly `collective.recipe.bootstrap <https://pypi.python.org/pypi/collective.recipe.bootstrap>`_
 
 ``buildout.bootstrap`` is a Buildout extension that adds a Buildout ``bootstrap.py`` file to your buildout.
 

@@ -2,6 +2,7 @@ import urllib
 
 line = '-' * 80
 truthiness = ('true', 'yes', 'on')
+filename = 'bootstrap-buildout.py'
 
 
 def install(buildout, open_=None):
@@ -14,7 +15,7 @@ def install(buildout, open_=None):
     if offline in truthiness:
         print 'Not updating bootstrap.py because buildout is in offline mode.'
         return
-    url = 'https://bootstrap.pypa.io/bootstrap-buildout.py'
+    url = 'https://bootstrap.pypa.io/%s' % filename
     try:
         code = urllib.urlopen(url).getcode()
     except IOError, e:
@@ -27,7 +28,7 @@ def install(buildout, open_=None):
         code = urllib2.urlopen(url).code
     if code == 200:
         data = urllib.urlopen(url).read()
-        infile = '/'.join([buildout['buildout']['directory'], 'bootstrap.py'])
+        infile = '/'.join([buildout['buildout']['directory'], filename])
         if open_ is None:
             open_ = open
         bootstrap = open_(infile, 'w')
